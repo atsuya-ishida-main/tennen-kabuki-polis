@@ -161,8 +161,12 @@ nav a:hover::after {
 ========================= */
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f8f6f2;
   text-align: center;
-  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .logo {
@@ -311,4 +315,79 @@ th, td {
 .card:hover {
   transform: translateY(-6px);
   box-shadow: var(--box-shadow);
+}
+
+
+/* =========================
+   Mobile Layout
+========================= */
+
+@media (max-width: 720px) {
+
+  /* ベース */
+
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2em 1.2em;
+  }
+
+  /* タイトル */
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  /* ナビゲーション */
+
+  nav {
+
+    margin: 10px auto 10px auto;
+    padding: 10px 16px;
+
+    justify-content: flex-start;
+
+    gap: 22px;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ロゴ */
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  /* カード */
+
+  .cards {
+
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    margin-top: 30px;
+
+  }
+
+  .card img {
+
+    height: 180px;
+
+  }
+
 }

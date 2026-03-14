@@ -1,49 +1,52 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<Layout title="天然歌舞伎Polis">
+  <section class="hero">
+    <h1>天然歌舞伎Polis</h1>
+    <p>
+      天然歌舞伎Polisは東西線早稲田駅徒歩２分という都心にありながら、音を出しながらガンガン立体造形を行えるスペースを目指して立ち上げました。<br>
+      元印刷工場であるこの建物をドンドン改修し
+	</p>
+
+      <ul>
+		<li>都心でありながら石、鉄、木、塑像など幅広い素材を扱える工房</li>
+		<li>ジャンルを問わずアーティストが気軽に立ち寄れるスペース</li>
+		<li>地域社会に芸術を通して貢献するコミュニティ</li>
+	  </ul>
+	<p>
+	これらを目指して日夜DIYに励んでいるので是非立ち寄ってみてください
+    </p>
+  </section>
+
+  <hr />
+
+<section class="cards">
+
+<a class="card" href="/about">
+<img src="/images/about.jpg" alt="About">
+<h2>About</h2>
+<p>天然歌舞伎Polisについて</p>
+</a>
+
+<a class="card" href="/space">
+<img src="/images/space.jpg" alt="About">
+<h2>Space</h2>
+<p>工房設備</p>
+</a>
+
+<a class="card" href="/work">
+<img src="/images/work.jpg" alt="About">
+<h2>Work</h2>
+<p>制作ログ</p>
+</a>
+
+<a class="card" href="/events">
+<img src="/images/events.jpg" alt="About">
+<h2>Events</h2>
+<p>イベント情報</p>
+</a>
+
+</section>
+</Layout>
